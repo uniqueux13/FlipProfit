@@ -1,38 +1,160 @@
 ---
-// Astro version of ScarcityBanner for marketing site
-// This will be hydrated on the client to enable real-time updates
+// Founding Member section for marketing site
+// Real-time counter with social proof and Discord integration
 ---
 
-<div id="scarcity-banner" class="hidden sticky top-0 z-50 bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-600 text-white shadow-lg slide-down">
-  <div class="max-w-7xl mx-auto px-4 py-3">
-    <div class="flex items-center justify-center gap-3 text-center flex-wrap">
-      <svg class="w-5 h-5 flex-shrink-0 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path>
-      </svg>
+<!-- Founding Member Section -->
+<section id="founding-members" class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+  <div class="max-w-5xl mx-auto">
+    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-emerald-100">
+      <!-- Header -->
+      <div class="bg-gradient-to-r from-emerald-600 to-emerald-500 px-6 sm:px-10 py-6 text-center">
+        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-3">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+          </svg>
+          <span class="text-white font-semibold text-sm">Founding Member Offer</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-2">
+          Join <span id="joined-count" class="inline-block min-w-[3ch] font-black">--</span> Founders Who Locked In
+        </h2>
+        <p class="text-emerald-100 text-lg">
+          Be part of the founding community that's scaling their reselling business
+        </p>
+      </div>
 
-      <p class="text-sm sm:text-base font-semibold">
-        <span class="inline-block">🎉 Founding Member Special:</span>
-        {' '}
-        <span class="inline-block">
-          Only{' '}
-          <span id="spots-remaining" class="inline-flex items-center justify-center min-w-[3ch] font-bold text-lg px-2 py-0.5 bg-white text-emerald-600 rounded-md transition-all duration-300">
-            --
-          </span>
-          {' '}<span id="spots-text">spots</span> left to lock in{' '}
-          <span class="font-bold underline decoration-2 underline-offset-2">$45/year for LIFE</span>
-          {' '}(future price: $180/year)
-        </span>
-      </p>
+      <!-- Content -->
+      <div class="px-6 sm:px-10 py-10">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <!-- Left: Counter & Pricing -->
+          <div class="text-center md:text-left">
+            <div class="mb-6">
+              <div class="text-slate-600 text-sm font-semibold uppercase tracking-wide mb-2">Spots Remaining</div>
+              <div class="flex items-center justify-center md:justify-start gap-4">
+                <div id="spots-remaining" class="text-7xl font-black text-emerald-600 transition-all duration-500 counter-number">
+                  --
+                </div>
+                <div class="text-left">
+                  <div class="text-slate-600 font-semibold">of 500</div>
+                  <div class="text-slate-500 text-sm">available</div>
+                </div>
+              </div>
+            </div>
 
-      <a
-        href="https://app.flipprofit.online/signup"
-        class="inline-block bg-white text-emerald-600 px-4 py-1.5 rounded-lg font-bold text-sm hover:bg-emerald-50 transition-colors shadow-lg hover:shadow-xl whitespace-nowrap"
-      >
-        Lock In Price →
-      </a>
+            <div class="bg-slate-50 rounded-xl p-6 mb-6">
+              <div class="flex items-baseline justify-center md:justify-start gap-3 mb-3">
+                <span class="text-5xl font-black text-slate-900">$45</span>
+                <span class="text-2xl text-slate-600 font-medium">/year</span>
+              </div>
+              <div class="text-slate-600 mb-3">
+                <span class="line-through text-red-500 font-semibold">$180/year</span>
+                <span class="ml-2 text-emerald-600 font-bold">Save 75%</span>
+              </div>
+              <div class="text-xs text-slate-500 italic">
+                Price locked in for life • No surprises, ever
+              </div>
+            </div>
+
+            <a
+              href="https://app.flipprofit.online/signup"
+              class="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 bg-emerald-600 text-white rounded-xl font-bold text-lg hover:bg-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              Lock In My Founding Price
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Right: Benefits & Discord -->
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">What You Get:</h3>
+              <div class="space-y-3">
+                <div class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <div class="font-semibold text-slate-900">Full Platform Access</div>
+                    <div class="text-slate-600 text-sm">AI sourcing, inventory tracking, profit analytics</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <div class="font-semibold text-slate-900">Lifetime Price Lock</div>
+                    <div class="text-slate-600 text-sm">$45/year forever, even as we add features</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <div class="font-semibold text-slate-900">Priority Support</div>
+                    <div class="text-slate-600 text-sm">Get help faster as a founding member</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <div class="font-semibold text-slate-900">Exclusive Discord Community</div>
+                    <div class="text-slate-600 text-sm">Network with other founders, share sourcing tips</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- No Commitment Badge -->
+            <div class="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-4">
+              <div class="flex items-center gap-3">
+                <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+                <div>
+                  <div class="font-bold text-slate-900">No Commitment Required</div>
+                  <div class="text-sm text-slate-600">No credit card • Cancel anytime • Full access immediately</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer: Social Proof -->
+      <div class="bg-slate-50 px-6 sm:px-10 py-6 border-t border-slate-200">
+        <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
+            </svg>
+            <span>No credit card required</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Cancel anytime</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Instant access</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <script>
   import { createClient } from '@supabase/supabase-js';
@@ -44,11 +166,10 @@
   // Initialize Supabase client
   const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-  const banner = document.getElementById('scarcity-banner');
   const spotsElement = document.getElementById('spots-remaining');
-  const spotsText = document.getElementById('spots-text');
+  const joinedCountElement = document.getElementById('joined-count');
 
-  async function updateSpotCount() {
+  async function updateCounts() {
     try {
       const { data, error } = await supabase
         .rpc('get_total_user_count');
@@ -58,15 +179,11 @@
       const userCount = data || 0;
       const spotsRemaining = Math.max(0, TOTAL_SPOTS - userCount);
 
-      if (spotsRemaining > 0) {
-        spotsElement.textContent = spotsRemaining;
-        spotsText.textContent = spotsRemaining === 1 ? 'spot' : 'spots';
-        banner.classList.remove('hidden');
-      } else {
-        banner.classList.add('hidden');
-      }
+      // Update both counters
+      joinedCountElement.textContent = userCount;
+      spotsElement.textContent = spotsRemaining;
 
-      return spotsRemaining;
+      return { userCount, spotsRemaining };
     } catch (err) {
       console.error('Error fetching user count:', err);
       return null;
@@ -74,7 +191,7 @@
   }
 
   // Initial load
-  updateSpotCount();
+  updateCounts();
 
   // Set up Realtime subscription
   const channel = supabase
@@ -89,34 +206,25 @@
       (payload) => {
         console.log('New user signed up:', payload);
 
-        // Add animation class
-        spotsElement.classList.add('scale-125', 'ring-4', 'ring-emerald-200');
+        // Add animation to both counters
+        spotsElement.classList.add('scale-110');
+        joinedCountElement.classList.add('scale-110');
 
-        // Update count
-        updateSpotCount();
+        // Update counts
+        updateCounts();
 
-        // Remove animation after 1 second
+        // Remove animation after 600ms
         setTimeout(() => {
-          spotsElement.classList.remove('scale-125', 'ring-4', 'ring-emerald-200');
-        }, 1000);
+          spotsElement.classList.remove('scale-110');
+          joinedCountElement.classList.remove('scale-110');
+        }, 600);
       }
     )
     .subscribe();
 </script>
 
 <style>
-  @keyframes slideDown {
-    from {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  .slide-down {
-    animation: slideDown 0.5s ease-out;
+  .counter-number {
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 </style>
