@@ -1,0 +1,121 @@
+---
+// Astro version of ScarcityBanner for marketing site
+// This will be hydrated on the client to enable real-time updates
+---
+
+<div id="scarcity-banner" class="hidden sticky top-0 z-50 bg-gradient-to-r from-red-600 via-orange-600 to-red-600 text-white shadow-lg slide-down">
+  <div class="max-w-7xl mx-auto px-4 py-3">
+    <div class="flex items-center justify-center gap-3 text-center flex-wrap">
+      <svg class="w-5 h-5 flex-shrink-0 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+      </svg>
+
+      <p class="text-sm sm:text-base font-semibold">
+        <span class="inline-block">⚠️ Price increasing to $80/year soon.</span>
+        {' '}
+        <span class="inline-block">
+          Only{' '}
+          <span id="spots-remaining" class="inline-flex items-center justify-center min-w-[3ch] font-bold text-lg px-2 py-0.5 bg-white text-red-600 rounded-md transition-all duration-300">
+            --
+          </span>
+          {' '}<span id="spots-text">spots</span> left to lock in $45/year{' '}
+          <span class="font-bold underline decoration-2 underline-offset-2">for life</span>.
+        </span>
+      </p>
+
+      <a
+        href="https://app.flipprofit.online/signup"
+        class="inline-block bg-white text-red-600 px-4 py-1.5 rounded-lg font-bold text-sm hover:bg-red-50 transition-colors shadow-lg hover:shadow-xl whitespace-nowrap"
+      >
+        Claim Your Spot →
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { createClient } from '@supabase/supabase-js';
+
+  const TOTAL_SPOTS = 65;
+  const SUPABASE_URL = import.meta.env.PUBLIC_SUPABASE_URL;
+  const SUPABASE_ANON_KEY = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+
+  // Initialize Supabase client
+  const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  const banner = document.getElementById('scarcity-banner');
+  const spotsElement = document.getElementById('spots-remaining');
+  const spotsText = document.getElementById('spots-text');
+
+  async function updateSpotCount() {
+    try {
+      const { count, error } = await supabase
+        .from('profiles')
+        .select('*', { count: 'exact', head: true });
+
+      if (error) throw error;
+
+      const spotsRemaining = Math.max(0, TOTAL_SPOTS - count);
+
+      if (spotsRemaining > 0) {
+        spotsElement.textContent = spotsRemaining;
+        spotsText.textContent = spotsRemaining === 1 ? 'spot' : 'spots';
+        banner.classList.remove('hidden');
+      } else {
+        banner.classList.add('hidden');
+      }
+
+      return spotsRemaining;
+    } catch (err) {
+      console.error('Error fetching user count:', err);
+      return null;
+    }
+  }
+
+  // Initial load
+  updateSpotCount();
+
+  // Set up Realtime subscription
+  const channel = supabase
+    .channel('profiles-changes')
+    .on(
+      'postgres_changes',
+      {
+        event: 'INSERT',
+        schema: 'public',
+        table: 'profiles'
+      },
+      (payload) => {
+        console.log('New user signed up:', payload);
+
+        // Add animation class
+        spotsElement.classList.add('scale-125', 'ring-4', 'ring-white/50');
+
+        // Update count
+        updateSpotCount();
+
+        // Remove animation after 1 second
+        setTimeout(() => {
+          spotsElement.classList.remove('scale-125', 'ring-4', 'ring-white/50');
+        }, 1000);
+      }
+    )
+    .subscribe();
+</script>
+
+<style>
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-down {
+    animation: slideDown 0.5s ease-out;
+  }
+</style>

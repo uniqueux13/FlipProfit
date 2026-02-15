@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* FlipProfit Brand Colors */
+  --color-emerald: #10b981;
+  --color-slate-dark: hsl(222.2 47.4% 11.2%);
+  --color-slate-light: hsl(210 40% 96.1%);
+  --color-gold: #f59e0b;
+
+  /* Extended Emerald Scale */
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+  --color-emerald-800: #065f46;
+  --color-emerald-900: #064e3b;
+
+  /* Fonts */
+  --font-coiny: 'Coiny', cursive;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.font-coiny {
+  font-family: var(--font-coiny);
+}
