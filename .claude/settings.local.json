@@ -3,7 +3,14 @@
     "allow": [
       "Bash(tree:*)",
       "Bash(test:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:flipprofit.online)",
+      "WebFetch(domain:gist.github.com)",
+      "Bash(npm run preview:*)",
+      "Bash(netlify:*)",
+      "Bash(npm install:*)",
+      "Bash(git add:*)"
     ]
   }
 }

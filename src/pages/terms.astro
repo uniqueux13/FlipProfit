@@ -1,0 +1,379 @@
+---
+import '../styles/global.css';
+
+const seoTitle = "Terms of Service - FlipProfit";
+const seoDescription = "Terms and conditions for using FlipProfit.";
+const canonicalURL = "https://flipprofit.online/terms";
+const lastUpdated = "February 19, 2026";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>{seoTitle}</title>
+    <meta name="description" content={seoDescription} />
+    <link rel="canonical" href={canonicalURL} />
+  </head>
+
+  <body class="bg-white">
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <img src="/images/logo-small.png" alt="FlipProfit Logo" class="w-10 h-10" />
+            <span class="font-coiny text-xl text-slate-dark">FlipProfit</span>
+          </a>
+
+          <div class="hidden md:flex items-center gap-6">
+            <a href="/#proof" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Proof</a>
+            <a href="/#founding-members" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Pricing</a>
+            <a href="/#features" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Features</a>
+            <a href="/#faq" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">FAQ</a>
+            <a
+              href="https://app.flipprofit.online/signup"
+              class="px-5 py-2 bg-emerald text-white rounded-lg font-semibold text-sm hover:bg-emerald-600 transition-colors shadow-sm"
+            >
+              Start Free Today
+            </a>
+          </div>
+
+          <div class="md:hidden">
+            <a
+              href="https://app.flipprofit.online/signup"
+              class="px-4 py-2 bg-emerald text-white rounded-lg font-semibold text-sm hover:bg-emerald-600 transition-colors"
+            >
+              Start Free
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Terms Content -->
+    <main class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-12">
+          <h1 class="text-4xl sm:text-5xl font-bold text-slate-dark mb-4">
+            Terms of Service
+          </h1>
+          <p class="text-lg text-gray-600">
+            Last updated: {lastUpdated}
+          </p>
+        </div>
+
+        <!-- Plain English Summary -->
+        <div class="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-8 mb-12">
+          <h2 class="text-2xl font-bold text-slate-dark mb-4">Plain English Summary</h2>
+          <p class="text-gray-700 mb-4">
+            By using FlipProfit, you agree to: use it honestly, not abuse the system, and pay for what you use. We provide the service as-is and can't guarantee 100% uptime. You can cancel anytime. If you're unhappy in the first 30 days, we'll refund you—no questions asked.
+          </p>
+          <p class="text-sm text-gray-600 italic">
+            The legal version below says the same thing with more detail.
+          </p>
+        </div>
+
+        <div class="prose prose-slate max-w-none">
+          <!-- Section 1 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">1. Acceptance of Terms</h2>
+            <p class="text-gray-700 mb-4">
+              By creating an account or using FlipProfit, you agree to these Terms of Service. If you don't agree, don't use FlipProfit.
+            </p>
+            <p class="text-gray-700 mb-4">
+              We may update these terms occasionally. If we make significant changes, we'll notify you via email. Continued use after changes means you accept the new terms.
+            </p>
+          </section>
+
+          <!-- Section 2 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">2. Description of Service</h2>
+            <p class="text-gray-700 mb-4">
+              FlipProfit is a SaaS platform for resellers that provides:
+            </p>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>Product scanning and profit calculation (scout feature)</li>
+              <li>AI-powered listing generation</li>
+              <li>eBay sales data synchronization</li>
+              <li>Inventory and profit tracking</li>
+            </ul>
+            <p class="text-gray-700 mb-4">
+              We reserve the right to add, modify, or remove features at any time. We'll notify users of major changes.
+            </p>
+          </section>
+
+          <!-- Section 3 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">3. Account Registration</h2>
+            <p class="text-gray-700 mb-4">
+              To use FlipProfit, you must:
+            </p>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>Be at least 13 years old</li>
+              <li>Provide a valid email address</li>
+              <li>Create a secure password</li>
+              <li>Not share your account with others</li>
+            </ul>
+            <p class="text-gray-700 mb-4">
+              You're responsible for all activity on your account. If you suspect unauthorized access, email <a href="mailto:team@flipprofit.online" class="text-emerald-600 font-semibold hover:underline">team@flipprofit.online</a> immediately.
+            </p>
+          </section>
+
+          <!-- Section 4 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">4. Pricing and Payment</h2>
+
+            <h3 class="text-xl font-semibold text-slate-dark mb-3 mt-6">Free Tier</h3>
+            <p class="text-gray-700 mb-4">
+              All accounts start with <strong>5 free scans per month</strong>. This allows you to test the scout feature.
+            </p>
+
+            <h3 class="text-xl font-semibold text-slate-dark mb-3 mt-6">Paid Plans</h3>
+            <p class="text-gray-700 mb-4">
+              Current pricing: <strong>$45/year</strong> (billed annually via Stripe)
+            </p>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>Paid plans include unlimited scans, eBay sync, AI listing tools, and profit tracking</li>
+              <li>Founding members who sign up before we reach 500 users lock in $45/year for life</li>
+              <li>After 500 founding members, the price will increase to $180/year for new users</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-slate-dark mb-3 mt-6">Price Lock Guarantee</h3>
+            <p class="text-gray-700 mb-4">
+              If you sign up during the founding member period, your price is locked at $45/year for as long as you maintain an active subscription—even if we raise prices later.
+            </p>
+
+            <h3 class="text-xl font-semibold text-slate-dark mb-3 mt-6">Billing</h3>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>You authorize Stripe to charge your payment method annually on your subscription date</li>
+              <li>If payment fails, we'll notify you and your account will be downgraded to the free tier after 7 days</li>
+              <li>You can update your payment method in your account settings</li>
+            </ul>
+          </section>
+
+          <!-- Section 5 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">5. Refund Policy</h2>
+            <div class="bg-emerald-50 border-l-4 border-emerald-600 p-6 mb-4">
+              <p class="text-gray-700 font-semibold mb-2">30-Day Money-Back Guarantee</p>
+              <p class="text-gray-700">
+                If you're unhappy with FlipProfit for any reason within 30 days of your first payment, email <a href="mailto:team@flipprofit.online" class="text-emerald-600 font-semibold hover:underline">team@flipprofit.online</a> and we'll issue a full refund—no questions asked.
+              </p>
+            </div>
+            <p class="text-gray-700 mb-4">
+              After 30 days, refunds are handled on a case-by-case basis. Contact us at <a href="mailto:team@flipprofit.online" class="text-emerald-600 font-semibold hover:underline">team@flipprofit.online</a> if you have an issue.
+            </p>
+            <p class="text-gray-700 mb-4">
+              Refunds are processed via Stripe and typically take 5-10 business days to appear in your account.
+            </p>
+          </section>
+
+          <!-- Section 6 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">6. Cancellation</h2>
+            <p class="text-gray-700 mb-4">
+              You can cancel your subscription anytime from your account settings. When you cancel:
+            </p>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>You'll retain full access until the end of your current billing period</li>
+              <li>Your account will automatically downgrade to the free tier (5 scans/month)</li>
+              <li>Your data will be preserved—you can reactivate anytime</li>
+              <li>If you're a founding member and reactivate later, you'll keep your locked-in price</li>
+            </ul>
+            <p class="text-gray-700 mb-4">
+              We do not offer pro-rated refunds for partial months. If you cancel mid-cycle, you keep access until the period ends.
+            </p>
+          </section>
+
+          <!-- Section 7 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">7. Acceptable Use</h2>
+            <p class="text-gray-700 mb-4">
+              You agree NOT to:
+            </p>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>Abuse the system (e.g., scraping data, making excessive API calls, or using automated bots)</li>
+              <li>Share your account credentials with others</li>
+              <li>Use FlipProfit for illegal activity (e.g., selling counterfeit goods, tax fraud)</li>
+              <li>Attempt to reverse-engineer, hack, or compromise FlipProfit's infrastructure</li>
+              <li>Resell or redistribute FlipProfit's data or services</li>
+            </ul>
+            <p class="text-gray-700 mb-4">
+              Violation of these terms may result in account suspension or termination without refund.
+            </p>
+          </section>
+
+          <!-- Section 8 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">8. Data Accuracy</h2>
+            <p class="text-gray-700 mb-4">
+              FlipProfit pulls data from eBay and Amazon APIs. We strive for accuracy, but:
+            </p>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>Data may be delayed or incomplete due to third-party API limitations</li>
+              <li>Profit calculations are estimates based on your inputs (COGS, fees)—verify before making business decisions</li>
+              <li>We are not responsible for financial losses due to inaccurate data</li>
+            </ul>
+            <p class="text-gray-700 mb-4">
+              <strong>You are responsible for verifying data before purchasing inventory or making business decisions.</strong>
+            </p>
+          </section>
+
+          <!-- Section 9 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">9. Service Availability</h2>
+            <p class="text-gray-700 mb-4">
+              We aim for 99.9% uptime, but we can't guarantee FlipProfit will be available 24/7. Downtime may occur due to:
+            </p>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>Scheduled maintenance (we'll notify you in advance)</li>
+              <li>Third-party service outages (Supabase, eBay API, etc.)</li>
+              <li>Unexpected technical issues</li>
+            </ul>
+            <p class="text-gray-700 mb-4">
+              We are not liable for losses due to service downtime. If you experience extended downtime, contact us for potential subscription credits.
+            </p>
+          </section>
+
+          <!-- Section 10 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">10. Limitation of Liability</h2>
+            <p class="text-gray-700 mb-4">
+              FlipProfit is provided "as-is" without warranties. To the extent permitted by law:
+            </p>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>We are not liable for lost profits, revenue, or data</li>
+              <li>Our total liability is limited to the amount you paid us in the last 12 months</li>
+              <li>We are not responsible for third-party services (eBay, Stripe, Supabase)</li>
+            </ul>
+            <p class="text-gray-700 mb-4">
+              <strong>Use FlipProfit as a tool, not as your sole business decision-making system.</strong>
+            </p>
+          </section>
+
+          <!-- Section 11 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">11. Account Termination</h2>
+            <p class="text-gray-700 mb-4">
+              We reserve the right to suspend or terminate your account if you:
+            </p>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>Violate these Terms of Service</li>
+              <li>Engage in fraudulent or abusive behavior</li>
+              <li>Fail to pay for your subscription</li>
+            </ul>
+            <p class="text-gray-700 mb-4">
+              If we terminate your account for cause, you will not receive a refund.
+            </p>
+            <p class="text-gray-700 mb-4">
+              You can request account deletion anytime by emailing <a href="mailto:team@flipprofit.online" class="text-emerald-600 font-semibold hover:underline">team@flipprofit.online</a>. We'll delete your data within 30 days (see our <a href="/privacy" class="text-emerald-600 font-semibold hover:underline">Privacy Policy</a>).
+            </p>
+          </section>
+
+          <!-- Section 12 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">12. Intellectual Property</h2>
+            <p class="text-gray-700 mb-4">
+              FlipProfit owns all rights to:
+            </p>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>The FlipProfit software, website, and mobile apps</li>
+              <li>Our logos, branding, and marketing materials</li>
+              <li>Any code, algorithms, or proprietary technology</li>
+            </ul>
+            <p class="text-gray-700 mb-4">
+              You retain ownership of data you upload (inventory, scans, listings). We will never claim ownership of your data.
+            </p>
+          </section>
+
+          <!-- Section 13 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">13. Governing Law</h2>
+            <p class="text-gray-700 mb-4">
+              These terms are governed by the laws of the United States and the state where FlipProfit is registered.
+            </p>
+            <p class="text-gray-700 mb-4">
+              Any disputes will be resolved through binding arbitration (unless you're in a jurisdiction that prohibits arbitration clauses). We'll try to resolve disputes informally first—email <a href="mailto:team@flipprofit.online" class="text-emerald-600 font-semibold hover:underline">team@flipprofit.online</a> before taking legal action.
+            </p>
+          </section>
+
+          <!-- Section 14 -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">14. Changes to Terms</h2>
+            <p class="text-gray-700 mb-4">
+              We may update these Terms of Service as FlipProfit evolves. If we make significant changes, we'll notify you via email at least 30 days in advance.
+            </p>
+            <p class="text-gray-700 mb-4">
+              Continued use after changes means you accept the new terms. If you don't agree, you can cancel your subscription before the changes take effect.
+            </p>
+          </section>
+
+          <!-- Contact -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-dark mb-4">Contact Us</h2>
+            <p class="text-gray-700 mb-4">
+              Questions about these terms? Email us at:
+            </p>
+            <p class="text-lg font-semibold text-emerald-600 mb-4">
+              <a href="mailto:team@flipprofit.online" class="hover:underline">team@flipprofit.online</a>
+            </p>
+            <p class="text-gray-700">
+              Or join our <a href="https://discord.gg/nYj3UzdJ" target="_blank" rel="noopener" class="text-emerald-600 font-semibold hover:underline">Discord community</a> to chat with us.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-slate-dark text-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <img src="/images/logo-small.png" alt="FlipProfit" class="w-8 h-8" />
+              <span class="font-coiny text-xl">FlipProfit</span>
+            </div>
+            <p class="text-gray-400 text-sm">
+              The all-in-one platform for resellers to scout, list, and track profits.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-semibold mb-3">Product</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+              <li><a href="/#founding-members" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="/#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="https://discord.gg/nYj3UzdJ" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">Community</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-semibold mb-3">Company</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="https://app.flipprofit.online/signup" class="text-gray-400 hover:text-white transition-colors">Sign Up</a></li>
+              <li><a href="https://app.flipprofit.online/login" class="text-gray-400 hover:text-white transition-colors">Login</a></li>
+              <li><a href="/contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-semibold mb-3">Legal</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/privacy" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+          <p>&copy; {new Date().getFullYear()} FlipProfit. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

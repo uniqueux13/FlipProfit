@@ -47,11 +47,6 @@ const atomicAnswer = "Scaling a reselling business requires implementing automat
         "@type": "Offer",
         "price": "0.00",
         "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "150"
       }
     })} />
 
@@ -71,40 +66,62 @@ const atomicAnswer = "Scaling a reselling business requires implementing automat
   </head>
 
   <body class="bg-white">
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <img src="/images/logo-small.png" alt="FlipProfit Logo" class="w-10 h-10" />
+            <span class="font-coiny text-xl text-slate-dark">FlipProfit</span>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center gap-6">
+            <a href="#proof" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Proof</a>
+            <a href="#founding-members" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Pricing</a>
+            <a href="#features" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Features</a>
+            <a href="#faq" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">FAQ</a>
+            <a
+              href="https://app.flipprofit.online/signup"
+              class="px-5 py-2 bg-emerald text-white rounded-lg font-semibold text-sm hover:bg-emerald-600 transition-colors shadow-sm"
+            >
+              Start Free Today
+            </a>
+          </div>
+
+          <!-- Mobile CTA -->
+          <div class="md:hidden">
+            <a
+              href="https://app.flipprofit.online/signup"
+              class="px-4 py-2 bg-emerald text-white rounded-lg font-semibold text-sm hover:bg-emerald-600 transition-colors"
+            >
+              Start Free
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <!-- Hero Section -->
     <div class="min-h-screen flex flex-col">
-      <!-- Header -->
-      <header class="py-6 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-          <div class="flex items-center gap-3">
-            <img src="/images/logo-small.png" alt="FlipProfit Logo" class="w-12 h-12" />
-            <span class="font-coiny text-2xl text-slate-dark">FlipProfit</span>
-          </div>
-          <a
-            href="https://app.flipprofit.online/signup"
-            class="px-6 py-2 bg-emerald text-white rounded-lg font-medium hover:bg-emerald-600 transition-colors"
-          >
-            Get Started
-          </a>
-        </div>
-      </header>
+      <!-- Hero Content (header removed, now using sticky nav) -->
 
       <!-- Hero Content -->
-      <main class="flex-1 px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <main class="flex-1 px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
         <div class="max-w-7xl mx-auto">
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Left Column: Text Content -->
             <div>
               <div class="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium mb-6">
-                The Operating System for the Modern Reseller
+                Used by resellers moving 50+ items/month
               </div>
 
               <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-dark leading-tight mb-6">
-                Scale Your Reselling Business with <span class="text-emerald">AI Automation</span>
+                Know What to Buy <span class="text-emerald">Before You Buy It</span>
               </h1>
 
               <p class="text-lg text-gray-600 mb-8">
-                Reselling is about finding value, not fighting spreadsheets. FlipProfit handles the math so you can stay in the flow.
+                Scan any barcode and see 30-day sales history, profit margins, and sell-through rates in 2 seconds. Stop guessing, start scaling.
               </p>
 
               <!-- Value Propositions -->
@@ -114,8 +131,8 @@ const atomicAnswer = "Scaling a reselling business requires implementing automat
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                   <div>
-                    <h3 class="font-semibold text-slate-dark">Scout at the Store</h3>
-                    <p class="text-gray-600">AI instantly tells you which items are worth buying</p>
+                    <h3 class="font-semibold text-slate-dark">Scan → See eBay/Amazon Data → Decide in 2 Seconds</h3>
+                    <p class="text-gray-600">Real sales data, not guesswork. See what items actually sold for in the last 30 days</p>
                   </div>
                 </div>
 
@@ -124,8 +141,8 @@ const atomicAnswer = "Scaling a reselling business requires implementing automat
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                   <div>
-                    <h3 class="font-semibold text-slate-dark">List in Seconds</h3>
-                    <p class="text-gray-600">AI writes titles, descriptions, and suggests prices</p>
+                    <h3 class="font-semibold text-slate-dark">Auto-Generated Listings with AI Titles</h3>
+                    <p class="text-gray-600">Upload a photo, get SEO-optimized titles and descriptions. Copy-paste to eBay, Mercari, Poshmark</p>
                   </div>
                 </div>
 
@@ -134,40 +151,41 @@ const atomicAnswer = "Scaling a reselling business requires implementing automat
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                   <div>
-                    <h3 class="font-semibold text-slate-dark">Track Every Dollar</h3>
-                    <p class="text-gray-600">Real-time profit tracking with tax-ready reports</p>
+                    <h3 class="font-semibold text-slate-dark">Profit Tracking Across All Platforms</h3>
+                    <p class="text-gray-600">Sync eBay sales automatically. Track COGS, fees, and net profit per item. Export for taxes</p>
                   </div>
                 </div>
               </div>
 
-              <!-- CTA Buttons -->
-              <div class="flex flex-col sm:flex-row gap-4">
+              <!-- CTA Button -->
+              <div>
                 <a
                   href="https://app.flipprofit.online/signup"
                   class="inline-flex items-center justify-center px-8 py-4 bg-emerald text-white rounded-lg font-semibold text-lg hover:bg-emerald-600 transition-colors shadow-lg hover:shadow-xl"
                 >
-                  Start Free Today
+                  Start Free Today - 5 Scans Included
                   <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                   </svg>
                 </a>
-                <a
-                  href="#features"
-                  class="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-dark border-2 border-slate-dark rounded-lg font-semibold text-lg hover:bg-slate-light transition-colors"
-                >
-                  See How It Works
-                </a>
+                <p class="text-sm text-gray-500 mt-3">
+                  No credit card required • 5 free scans to start
+                </p>
               </div>
             </div>
 
-            <!-- Right Column: Logo Image -->
+            <!-- Right Column: Operational Demo -->
             <div class="flex justify-center lg:justify-end">
               <div class="relative">
-                <img
-                  src="/images/logo.png"
-                  alt="FlipProfit - AI-Powered Reseller Command Center"
-                  class="w-80 h-80 lg:w-96 lg:h-96 drop-shadow-2xl animate-float"
-                />
+                <!-- GIF with top crop -->
+                <div class="overflow-hidden rounded-2xl shadow-2xl border-4 border-emerald-200 bg-white">
+                  <img
+                    src="/images/FlipProfit Scan Feature.gif"
+                    alt="FlipProfit Scout Feature - Scan items and get instant profit calculations"
+                    class="w-full max-w-xs lg:max-w-sm"
+                    style="margin-top: -8px;"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -175,12 +193,133 @@ const atomicAnswer = "Scaling a reselling business requires implementing automat
       </main>
     </div>
 
+    <!-- Social Proof Section -->
+    <section id="proof" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-dark mb-4">
+            Real Items. Real Profits.
+          </h2>
+          <p class="text-lg text-gray-600">
+            These are actual items found and flipped by FlipProfit users
+          </p>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Item 1 -->
+          <div class="bg-slate-light rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+            <div class="aspect-square">
+              <img
+                src="/images/Photo-of-item-flipped.jpg"
+                alt="Flipped item - vintage collectible"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4">
+              <div class="text-xs text-emerald-600 font-bold uppercase mb-1">Sold on eBay</div>
+              <div class="text-sm text-gray-700 font-medium">Vintage Collectible</div>
+              <div class="flex items-center gap-2 mt-2">
+                <span class="text-xs text-gray-500">Cost: $8</span>
+                <span class="text-xs text-gray-400">→</span>
+                <span class="text-sm text-emerald-600 font-bold">Sold: $45</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="bg-slate-light rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+            <div class="aspect-square">
+              <img
+                src="/images/Photo-of-item-flipped-inpackage-item.jpg"
+                alt="Flipped item - sealed package"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4">
+              <div class="text-xs text-emerald-600 font-bold uppercase mb-1">Sold on Mercari</div>
+              <div class="text-sm text-gray-700 font-medium">NIB Collectible</div>
+              <div class="flex items-center gap-2 mt-2">
+                <span class="text-xs text-gray-500">Cost: $12</span>
+                <span class="text-xs text-gray-400">→</span>
+                <span class="text-sm text-emerald-600 font-bold">Sold: $68</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="bg-slate-light rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+            <div class="aspect-square">
+              <img
+                src="/images/Photo-of-item-flipped-starwarsvhs.jpg"
+                alt="Flipped item - Star Wars VHS"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4">
+              <div class="text-xs text-emerald-600 font-bold uppercase mb-1">Sold on eBay</div>
+              <div class="text-sm text-gray-700 font-medium">Star Wars VHS Set</div>
+              <div class="flex items-center gap-2 mt-2">
+                <span class="text-xs text-gray-500">Cost: $5</span>
+                <span class="text-xs text-gray-400">→</span>
+                <span class="text-sm text-emerald-600 font-bold">Sold: $32</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Finding Items Image - Spans 2 columns on desktop -->
+          <div class="col-span-2 md:col-span-3 bg-gradient-to-br from-emerald-50 to-white rounded-xl overflow-hidden shadow-lg p-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <img
+                  src="/images/finding-item-in-store.jpg"
+                  alt="Finding valuable items in store"
+                  class="rounded-xl shadow-lg"
+                />
+              </div>
+              <div>
+                <div class="text-emerald-600 font-bold text-sm uppercase tracking-wider mb-2">The Hunt</div>
+                <h3 class="text-2xl font-bold text-slate-dark mb-3">
+                  The Best Part? Finding Hidden Gems
+                </h3>
+                <p class="text-gray-700 mb-4">
+                  Every successful reseller knows that feeling when you spot an underpriced item. FlipProfit takes the guesswork out by showing you the data instantly.
+                </p>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>Scan while browsing shelves</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>See real sales data in 2 seconds</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>Buy only profitable items</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Founding Member Section -->
-    <ScarcityBanner />
+    <div class="bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+      <ScarcityBanner />
+    </div>
 
     <!-- SEO Content Section: How to Scale a Reselling Business -->
     <section id="features" class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-light">
-      <div class="max-w-4xl mx-auto">
+      <div class="max-w-6xl mx-auto">
         <h2 class="text-3xl sm:text-4xl font-bold text-slate-dark mb-6 text-center">
           How to Scale a Reselling Business
         </h2>
@@ -192,96 +331,250 @@ const atomicAnswer = "Scaling a reselling business requires implementing automat
           </p>
         </div>
 
-        <!-- Feature Grid -->
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-              </svg>
+        <!-- Workflow Demonstration -->
+        <div class="space-y-12">
+          <!-- Step 1: At the Store -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+              <div class="bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full inline-block mb-4">
+                Step 1: Sourcing
+              </div>
+              <h3 class="text-2xl font-bold text-slate-dark mb-4">Scout Items at the Store</h3>
+              <p class="text-gray-700 mb-4">
+                Open FlipProfit on your phone, scan any barcode, and instantly see:
+              </p>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-emerald flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>30-day eBay sold listings and average price</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-emerald flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Amazon sales rank and pricing</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-emerald flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Profit calculation after fees</span>
+                </li>
+              </ul>
             </div>
-            <h3 class="text-xl font-semibold text-slate-dark mb-2">Automated Inventory</h3>
-            <p class="text-gray-600">Centralized dashboard tracks all items across platforms with automatic syncing</p>
+            <div class="order-1 md:order-2">
+              <img
+                src="/images/at-the-store.jpg"
+                alt="Reseller scouting items at a thrift store"
+                class="rounded-2xl shadow-xl w-full"
+              />
+            </div>
           </div>
 
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-              </svg>
+          <!-- Step 2: Listing -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <img
+                src="/images/holding-two-items-in-store.jpg"
+                alt="Holding items ready to flip"
+                class="rounded-2xl shadow-xl w-full"
+              />
             </div>
-            <h3 class="text-xl font-semibold text-slate-dark mb-2">AI-Powered Sourcing</h3>
-            <p class="text-gray-600">Scan items in-store and get instant profit calculations before you buy</p>
+            <div>
+              <div class="bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full inline-block mb-4">
+                Step 2: Listing
+              </div>
+              <h3 class="text-2xl font-bold text-slate-dark mb-4">Create Listings in Seconds</h3>
+              <p class="text-gray-700 mb-4">
+                Take a photo of your item and let AI handle the heavy lifting:
+              </p>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-emerald flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>AI-generated SEO-optimized titles</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-emerald flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Detailed descriptions with keywords</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-emerald flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Suggested pricing based on market data</span>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-              </svg>
+          <!-- Step 3: Tracking -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+              <div class="bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full inline-block mb-4">
+                Step 3: Profit Tracking
+              </div>
+              <h3 class="text-2xl font-bold text-slate-dark mb-4">Track Every Dollar Automatically</h3>
+              <p class="text-gray-700 mb-4">
+                Sync your eBay account and let FlipProfit handle the rest:
+              </p>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-emerald flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Automatic sales import from eBay</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-emerald flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Real-time profit calculations (COGS, fees, shipping)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-emerald flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Tax-ready reports exportable to CSV</span>
+                </li>
+              </ul>
             </div>
-            <h3 class="text-xl font-semibold text-slate-dark mb-2">Real-Time Analytics</h3>
-            <p class="text-gray-600">Track profit margins, fees, and ROI across all marketplaces in one place</p>
+            <div class="order-1 md:order-2">
+              <img
+                src="/images/profit-calc-screenshot.jpg"
+                alt="FlipProfit profit tracking dashboard"
+                class="rounded-2xl shadow-xl w-full border-4 border-emerald-200"
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Waitlist/CTA Section -->
-    <section id="waitlist" class="py-20 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold text-slate-dark mb-4">
-          Ready to Scale Your Business?
-        </h2>
-        <p class="text-xl text-gray-600 mb-8">
-          Join hundreds of resellers automating their operations with FlipProfit
-        </p>
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-dark mb-4">
+            Common Questions
+          </h2>
+          <p class="text-lg text-gray-600">
+            Everything you need to know about FlipProfit
+          </p>
+        </div>
 
-        <div class="bg-slate-light rounded-2xl p-8">
-          <div class="max-w-md mx-auto">
-            <a
-              href="https://app.flipprofit.online/signup"
-              class="inline-flex items-center justify-center w-full px-8 py-4 bg-emerald text-white rounded-lg font-semibold text-lg hover:bg-emerald-600 transition-colors shadow-lg hover:shadow-xl"
-            >
-              Get Started Free
-              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-              </svg>
-            </a>
-            <p class="text-sm text-gray-500 mt-4 text-center">
-              No credit card required. Start with 5 free AI scans per month.
+        <div class="space-y-6">
+          <!-- FAQ 1 -->
+          <div class="bg-slate-light rounded-xl p-6 shadow-md">
+            <h3 class="text-lg font-bold text-slate-dark mb-3">Why not just use eBay and Amazon directly?</h3>
+            <p class="text-gray-700">
+              Searching eBay sold listings manually takes 2-3 minutes per item. FlipProfit shows you 30-day sales data, profit margins, and Amazon pricing in 2 seconds. When you're sourcing 20+ items in a trip, that's an hour saved every time you visit a thrift store.
+            </p>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-slate-light rounded-xl p-6 shadow-md">
+            <h3 class="text-lg font-bold text-slate-dark mb-3">How accurate is the sales data?</h3>
+            <p class="text-gray-700">
+              FlipProfit pulls directly from eBay's API for sold listings and Amazon's product database. The data is as accurate as what you'd see manually searching these platforms—but delivered instantly. We show you actual sold prices, not just listed prices, so you know what items really sell for.
+            </p>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-slate-light rounded-xl p-6 shadow-md">
+            <h3 class="text-lg font-bold text-slate-dark mb-3">What if I only flip part-time or don't have 50 items/month?</h3>
+            <p class="text-gray-700">
+              That's perfectly fine! Start with our free tier (5 scans/month) to test it out. Even if you're sourcing 10-20 items per month, the time savings and better buying decisions pay for themselves. Many part-time resellers use FlipProfit just for the scout feature when thrifting on weekends.
+            </p>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="bg-slate-light rounded-xl p-6 shadow-md">
+            <h3 class="text-lg font-bold text-slate-dark mb-3">Can I really cancel anytime?</h3>
+            <p class="text-gray-700">
+              Yes! No contracts, no commitments. Cancel from your account settings anytime. If you lock in the $45/year founding price and cancel later, you can reactivate at your locked-in rate anytime—the price lock is tied to your account forever.
+            </p>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="bg-slate-light rounded-xl p-6 shadow-md">
+            <h3 class="text-lg font-bold text-slate-dark mb-3">How much time does this actually save?</h3>
+            <p class="text-gray-700">
+              <strong>Sourcing:</strong> 90% faster than manual research (2 seconds vs 2-3 minutes per item)<br>
+              <strong>Listing:</strong> AI-generated titles and descriptions save 5-10 minutes per listing<br>
+              <strong>Tracking:</strong> Automatic eBay sync eliminates manual spreadsheet entry<br><br>
+              Most users report saving 5-10 hours per week across their entire workflow.
+            </p>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="bg-slate-light rounded-xl p-6 shadow-md">
+            <h3 class="text-lg font-bold text-slate-dark mb-3">Is 5 free scans enough to test the scout feature?</h3>
+            <p class="text-gray-700">
+              The 5 free scans are designed to let you test the accuracy and speed on your next sourcing trip. Scan 5 items you're considering, see the instant data, and decide if FlipProfit fits your workflow. If you want to unlock unlimited scans and the full platform, upgrade anytime.
             </p>
           </div>
         </div>
       </div>
     </section>
 
+
     <!-- Footer -->
-    <footer class="py-8 px-4 sm:px-6 lg:px-8 bg-slate-dark text-white">
-      <div class="max-w-7xl mx-auto text-center">
-        <div class="flex items-center justify-center gap-3 mb-4">
-          <img src="/images/logo-small.png" alt="FlipProfit" class="w-8 h-8" />
-          <span class="font-coiny text-xl">FlipProfit</span>
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-slate-dark text-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <!-- Brand -->
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <img src="/images/logo-small.png" alt="FlipProfit" class="w-8 h-8" />
+              <span class="font-coiny text-xl">FlipProfit</span>
+            </div>
+            <p class="text-gray-400 text-sm">
+              The all-in-one platform for resellers to scout, list, and track profits.
+            </p>
+          </div>
+
+          <!-- Product -->
+          <div>
+            <h3 class="font-semibold mb-3">Product</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+              <li><a href="#founding-members" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="https://discord.gg/nYj3UzdJ" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">Community</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="font-semibold mb-3">Company</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="https://app.flipprofit.online/signup" class="text-gray-400 hover:text-white transition-colors">Sign Up</a></li>
+              <li><a href="https://app.flipprofit.online/login" class="text-gray-400 hover:text-white transition-colors">Login</a></li>
+              <li><a href="/contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h3 class="font-semibold mb-3">Legal</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/privacy" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+            </ul>
+          </div>
         </div>
-        <p class="text-gray-400">
-          &copy; {new Date().getFullYear()} FlipProfit. All rights reserved.
-        </p>
+
+        <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+          <p>&copy; {new Date().getFullYear()} FlipProfit. All rights reserved.</p>
+        </div>
       </div>
     </footer>
 
-    <style>
-      @keyframes float {
-        0%, 100% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
-      }
-
-      .animate-float {
-        animation: float 6s ease-in-out infinite;
-      }
-    </style>
   </body>
 </html>
