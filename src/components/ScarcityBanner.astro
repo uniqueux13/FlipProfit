@@ -16,20 +16,7 @@
       <div class="bg-gradient-to-r from-emerald-600 to-emerald-500 px-6 py-5 text-center">
         <div class="mb-3">
           <div class="text-white/90 text-xs font-bold uppercase tracking-widest mb-1">Founding Member Offer</div>
-          <div class="text-white text-sm font-medium">
-            <span id="joined-count" class="font-bold text-lg">--</span> joined
-          </div>
-        </div>
-
-        <!-- Simplified Counter -->
-        <div class="mb-3">
-          <div class="text-white/80 text-xs font-semibold uppercase tracking-wide mb-1">Spots Remaining</div>
-          <div class="flex items-center justify-center gap-3">
-            <div id="spots-remaining" class="text-5xl font-black text-white drop-shadow-xl counter-number leading-none">
-              --
-            </div>
-          </div>
-          <div class="text-white/80 text-xs font-medium mt-1">of 500</div>
+          <div class="text-white text-sm font-medium">Limited to the first 500 members</div>
         </div>
 
         <!-- Pricing -->
@@ -157,85 +144,3 @@
   </div>
 </section>
 
-<script>
-  import { createClient } from '@supabase/supabase-js';
-
-  const TOTAL_SPOTS = 500;
-  const SUPABASE_URL = import.meta.env.PUBLIC_SUPABASE_URL;
-  const SUPABASE_ANON_KEY = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
-
-  // Initialize Supabase client
-  const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-  const spotsElement = document.getElementById('spots-remaining');
-  const joinedCountElement = document.getElementById('joined-count');
-
-  async function updateCounts() {
-    try {
-      const { data, error } = await supabase
-        .rpc('get_total_user_count');
-
-      if (error) throw error;
-
-      const userCount = data || 0;
-      const spotsRemaining = Math.max(0, TOTAL_SPOTS - userCount);
-
-      // Update both counters
-      joinedCountElement.textContent = userCount;
-      spotsElement.textContent = spotsRemaining;
-
-      return { userCount, spotsRemaining };
-    } catch (err) {
-      console.error('Error fetching user count:', err);
-      return null;
-    }
-  }
-
-  // Initial load
-  updateCounts();
-
-  // Set up Realtime subscription
-  const channel = supabase
-    .channel('profiles-changes')
-    .on(
-      'postgres_changes',
-      {
-        event: 'INSERT',
-        schema: 'public',
-        table: 'profiles'
-      },
-      (payload) => {
-        console.log('New user signed up:', payload);
-
-        // Add dramatic animation for live stream
-        spotsElement.classList.add('scale-110', 'animate-pulse');
-        joinedCountElement.classList.add('scale-110');
-
-        // Update counts
-        updateCounts();
-
-        // Remove animation after 800ms
-        setTimeout(() => {
-          spotsElement.classList.remove('scale-110', 'animate-pulse');
-          joinedCountElement.classList.remove('scale-110');
-        }, 800);
-      }
-    )
-    .subscribe();
-</script>
-
-<style>
-  .counter-number {
-    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  }
-
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.8;
-    }
-  }
-</style>
