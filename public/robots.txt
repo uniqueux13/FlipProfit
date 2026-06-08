@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://flipprofit.online/sitemap-index.xml
