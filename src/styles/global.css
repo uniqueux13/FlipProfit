@@ -1,5 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
 @import "tailwindcss";
+
+/* Self-hosted Coiny (logo font) — avoids a render-blocking request to fonts.googleapis.com */
+@font-face {
+  font-family: 'Coiny';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/coiny-latin-400.woff2') format('woff2');
+}
 
 @theme {
   /* FlipProfit Brand Colors */
