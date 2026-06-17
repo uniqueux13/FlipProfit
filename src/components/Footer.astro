@@ -1,0 +1,57 @@
+---
+// Shared footer. Anchors are absolute ("/#id") so they work from every page.
+const APP = 'https://app.flipprofit.online';
+const JOIN = `${APP}/signup`;
+const year = new Date().getFullYear();
+---
+<footer class="py-12 px-4 sm:px-6 lg:px-8 bg-slate-dark text-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="/images/logo-small.png" alt="FlipProfit" width="32" height="32" class="w-8 h-8" />
+          <span class="font-coiny text-xl">FlipProfit</span>
+        </div>
+        <p class="text-gray-300 text-sm">
+          The marketplace for one-of-a-kind finds. Buy unique items with confidence, or sell yours in seconds.
+        </p>
+      </div>
+
+      <!-- Marketplace -->
+      <div>
+        <h2 class="font-semibold mb-3">Marketplace</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href={APP} class="text-gray-300 hover:text-white transition-colors">Browse items</a></li>
+          <li><a href={JOIN} class="text-gray-300 hover:text-white transition-colors">Start selling</a></li>
+          <li><a href="/#how" class="text-gray-300 hover:text-white transition-colors">How it works</a></li>
+          <li><a href="/#faq" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h2 class="font-semibold mb-3">Company</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href={JOIN} class="text-gray-300 hover:text-white transition-colors">Sign Up</a></li>
+          <li><a href={`${APP}/login`} class="text-gray-300 hover:text-white transition-colors">Login</a></li>
+          <li><a href="/contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+          <li><a href="https://discord.gg/nYj3UzdJ" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">Community</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h2 class="font-semibold mb-3">Legal</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/privacy" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms" class="text-gray-300 hover:text-white transition-colors">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-300">
+      <p>&copy; {year} FlipProfit. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

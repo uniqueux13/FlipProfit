@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
 
 const seoTitle = "Privacy Policy - FlipProfit";
 const seoDescription = "How FlipProfit collects, uses, and protects your data.";
@@ -7,323 +7,229 @@ const canonicalURL = "https://flipprofit.online/privacy";
 const lastUpdated = "February 19, 2026";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <title>{seoTitle}</title>
-    <meta name="description" content={seoDescription} />
-    <link rel="canonical" href={canonicalURL} />
-  </head>
-
-  <body class="bg-white">
-    <!-- Sticky Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <img src="/images/logo-small.png" alt="FlipProfit Logo" class="w-10 h-10" />
-            <span class="font-coiny text-xl text-slate-dark">FlipProfit</span>
-          </a>
-
-          <div class="hidden md:flex items-center gap-6">
-            <a href="/#proof" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Proof</a>
-            <a href="https://app.flipprofit.online/signup" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Pricing</a>
-            <a href="/#features" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Features</a>
-            <a href="/#faq" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">FAQ</a>
-            <a
-              href="https://app.flipprofit.online/signup"
-              class="px-5 py-2 bg-emerald text-white rounded-lg font-semibold text-sm hover:bg-emerald-600 transition-colors shadow-sm"
-            >
-              Start Free Today
-            </a>
-          </div>
-
-          <div class="md:hidden">
-            <a
-              href="https://app.flipprofit.online/signup"
-              class="px-4 py-2 bg-emerald text-white rounded-lg font-semibold text-sm hover:bg-emerald-600 transition-colors"
-            >
-              Start Free
-            </a>
-          </div>
-        </div>
+<Layout title={seoTitle} description={seoDescription} canonical={canonicalURL}>
+  <!-- Privacy Policy Content -->
+  <main class="py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-12">
+        <h1 class="text-4xl sm:text-5xl font-bold text-slate-dark mb-4">
+          Privacy Policy
+        </h1>
+        <p class="text-lg text-gray-600">
+          Last updated: {lastUpdated}
+        </p>
       </div>
-    </nav>
 
-    <!-- Privacy Policy Content -->
-    <main class="py-16 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto">
-        <div class="mb-12">
-          <h1 class="text-4xl sm:text-5xl font-bold text-slate-dark mb-4">
-            Privacy Policy
-          </h1>
-          <p class="text-lg text-gray-600">
-            Last updated: {lastUpdated}
-          </p>
-        </div>
+      <!-- Plain English Summary -->
+      <div class="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-8 mb-12">
+        <h2 class="text-2xl font-bold text-slate-dark mb-4">Plain English Summary</h2>
+        <p class="text-gray-700 mb-4">
+          We collect only what we need to run FlipProfit. This includes your email and the items you scan and list. We don't sell your data. We use Supabase for database storage, Stripe for payments and payouts, and Google for market data and AI analysis. You can request deletion of your data anytime.
+        </p>
+        <p class="text-sm text-gray-600 italic">
+          The legal version below says the same thing with more detail.
+        </p>
+      </div>
 
-        <!-- Plain English Summary -->
-        <div class="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-8 mb-12">
-          <h2 class="text-2xl font-bold text-slate-dark mb-4">Plain English Summary</h2>
+      <div class="prose prose-slate max-w-none">
+        <!-- Section 1 -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-slate-dark mb-4">1. Information We Collect</h2>
+
+          <h3 class="text-xl font-semibold text-slate-dark mb-3 mt-6">Account Information</h3>
           <p class="text-gray-700 mb-4">
-            We collect only what we need to run FlipProfit. This includes your email and the items you scan and list. We don't sell your data. We use Supabase for database storage, Stripe for payments and payouts, and Google for market data and AI analysis. You can request deletion of your data anytime.
+            When you sign up for FlipProfit, we collect:
           </p>
-          <p class="text-sm text-gray-600 italic">
-            The legal version below says the same thing with more detail.
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+            <li>Email address (required for account creation and login)</li>
+            <li>Password (encrypted and stored securely via Supabase Auth)</li>
+            <li>Profile information (optional: name, profile photo)</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-slate-dark mb-3 mt-6">Usage Data</h3>
+          <p class="text-gray-700 mb-4">
+            When you use FlipProfit, we collect:
           </p>
-        </div>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+            <li>Items you scan (barcodes, product names, scan timestamps)</li>
+            <li>Items you save to your inventory</li>
+            <li>Listings you create</li>
+            <li>Profit tracking data (costs, sale prices, fees)</li>
+          </ul>
 
-        <div class="prose prose-slate max-w-none">
-          <!-- Section 1 -->
-          <section class="mb-10">
-            <h2 class="text-2xl font-bold text-slate-dark mb-4">1. Information We Collect</h2>
+          <h3 class="text-xl font-semibold text-slate-dark mb-3 mt-6">Connected Services</h3>
+          <p class="text-gray-700 mb-4">
+            If you connect third-party services:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+            <li><strong>Stripe Connect:</strong> If you sell, you connect a Stripe account so we can pay out your earnings (Stripe handles your bank details directly)</li>
+            <li><strong>Stripe:</strong> We store your Stripe customer ID for billing (Stripe handles your payment card data directly—we never see it)</li>
+          </ul>
+        </section>
 
-            <h3 class="text-xl font-semibold text-slate-dark mb-3 mt-6">Account Information</h3>
-            <p class="text-gray-700 mb-4">
-              When you sign up for FlipProfit, we collect:
-            </p>
-            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-              <li>Email address (required for account creation and login)</li>
-              <li>Password (encrypted and stored securely via Supabase Auth)</li>
-              <li>Profile information (optional: name, profile photo)</li>
-            </ul>
+        <!-- Section 2 -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-slate-dark mb-4">2. How We Use Your Information</h2>
+          <p class="text-gray-700 mb-4">
+            We use your data to:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+            <li>Provide the FlipProfit service (scout feature, listing tools, profit tracking)</li>
+            <li>Process your marketplace orders, shipping, and payouts</li>
+            <li>Process payments via Stripe</li>
+            <li>Send important account emails (password resets, billing notifications)</li>
+            <li>Improve our product (we analyze usage patterns to fix bugs and add features)</li>
+          </ul>
+          <p class="text-gray-700 mb-4">
+            <strong>We do not:</strong>
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+            <li>Sell your data to third parties</li>
+            <li>Show you ads based on your data</li>
+            <li>Share your data with anyone except our service providers (Supabase, Stripe, Google)</li>
+          </ul>
+        </section>
 
-            <h3 class="text-xl font-semibold text-slate-dark mb-3 mt-6">Usage Data</h3>
-            <p class="text-gray-700 mb-4">
-              When you use FlipProfit, we collect:
-            </p>
-            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-              <li>Items you scan (barcodes, product names, scan timestamps)</li>
-              <li>Items you save to your inventory</li>
-              <li>Listings you create</li>
-              <li>Profit tracking data (costs, sale prices, fees)</li>
-            </ul>
-
-            <h3 class="text-xl font-semibold text-slate-dark mb-3 mt-6">Connected Services</h3>
-            <p class="text-gray-700 mb-4">
-              If you connect third-party services:
-            </p>
-            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-              <li><strong>Stripe Connect:</strong> If you sell, you connect a Stripe account so we can pay out your earnings (Stripe handles your bank details directly)</li>
-              <li><strong>Stripe:</strong> We store your Stripe customer ID for billing (Stripe handles your payment card data directly—we never see it)</li>
-            </ul>
-          </section>
-
-          <!-- Section 2 -->
-          <section class="mb-10">
-            <h2 class="text-2xl font-bold text-slate-dark mb-4">2. How We Use Your Information</h2>
-            <p class="text-gray-700 mb-4">
-              We use your data to:
-            </p>
-            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-              <li>Provide the FlipProfit service (scout feature, listing tools, profit tracking)</li>
-              <li>Process your marketplace orders, shipping, and payouts</li>
-              <li>Process payments via Stripe</li>
-              <li>Send important account emails (password resets, billing notifications)</li>
-              <li>Improve our product (we analyze usage patterns to fix bugs and add features)</li>
-            </ul>
-            <p class="text-gray-700 mb-4">
-              <strong>We do not:</strong>
-            </p>
-            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-              <li>Sell your data to third parties</li>
-              <li>Show you ads based on your data</li>
-              <li>Share your data with anyone except our service providers (Supabase, Stripe, Google)</li>
-            </ul>
-          </section>
-
-          <!-- Section 3 -->
-          <section class="mb-10">
-            <h2 class="text-2xl font-bold text-slate-dark mb-4">3. Third-Party Services</h2>
-            <p class="text-gray-700 mb-4">
-              FlipProfit uses these third-party services:
-            </p>
-            <div class="space-y-4">
-              <div class="bg-slate-light rounded-lg p-4">
-                <h3 class="font-semibold text-slate-dark mb-2">Supabase (Database & Authentication)</h3>
-                <p class="text-sm text-gray-700">
-                  Stores your account data, scans, inventory, and profit tracking. Hosted in the United States.
-                  <a href="https://supabase.com/privacy" target="_blank" rel="noopener" class="text-emerald-600 hover:underline">Supabase Privacy Policy</a>
-                </p>
-              </div>
-              <div class="bg-slate-light rounded-lg p-4">
-                <h3 class="font-semibold text-slate-dark mb-2">Stripe (Payment Processing)</h3>
-                <p class="text-sm text-gray-700">
-                  Handles all payment card processing. We never see or store your card details.
-                  <a href="https://stripe.com/privacy" target="_blank" rel="noopener" class="text-emerald-600 hover:underline">Stripe Privacy Policy</a>
-                </p>
-              </div>
-              <div class="bg-slate-light rounded-lg p-4">
-                <h3 class="font-semibold text-slate-dark mb-2">Google (Shopping API & Gemini AI)</h3>
-                <p class="text-sm text-gray-700">
-                  Provides live market pricing (Google Shopping API) and powers AI image analysis for listings (Gemini). We send product images and search terms; we don't share your account details.
-                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-emerald-600 hover:underline">Google Privacy Policy</a>
-                </p>
-              </div>
+        <!-- Section 3 -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-slate-dark mb-4">3. Third-Party Services</h2>
+          <p class="text-gray-700 mb-4">
+            FlipProfit uses these third-party services:
+          </p>
+          <div class="space-y-4">
+            <div class="bg-slate-light rounded-lg p-4">
+              <h3 class="font-semibold text-slate-dark mb-2">Supabase (Database & Authentication)</h3>
+              <p class="text-sm text-gray-700">
+                Stores your account data, scans, inventory, and profit tracking. Hosted in the United States.
+                <a href="https://supabase.com/privacy" target="_blank" rel="noopener" class="text-emerald-600 hover:underline">Supabase Privacy Policy</a>
+              </p>
             </div>
-          </section>
-
-          <!-- Section 4 -->
-          <section class="mb-10">
-            <h2 class="text-2xl font-bold text-slate-dark mb-4">4. Data Retention</h2>
-            <p class="text-gray-700 mb-4">
-              We keep your data as long as your account is active. If you delete your account, we delete:
-            </p>
-            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-              <li>Your profile information</li>
-              <li>Your scans and inventory data</li>
-              <li>Your profit tracking records</li>
-            </ul>
-            <p class="text-gray-700 mb-4">
-              We may retain some data for legal or accounting purposes (e.g., transaction records for tax compliance).
-            </p>
-          </section>
-
-          <!-- Section 5 -->
-          <section class="mb-10">
-            <h2 class="text-2xl font-bold text-slate-dark mb-4">5. Your Rights</h2>
-            <p class="text-gray-700 mb-4">
-              You have the right to:
-            </p>
-            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-              <li><strong>Access your data:</strong> Request a copy of all data we have about you</li>
-              <li><strong>Correct your data:</strong> Update incorrect information in your account settings</li>
-              <li><strong>Delete your data:</strong> Request full account deletion (we'll delete everything within 30 days)</li>
-              <li><strong>Export your data:</strong> Download your scans and profit data as CSV</li>
-            </ul>
-            <p class="text-gray-700 mb-4">
-              To exercise these rights, email us at <a href="mailto:team@flipprofit.online" class="text-emerald-600 font-semibold hover:underline">team@flipprofit.online</a>
-            </p>
-          </section>
-
-          <!-- Section 6 -->
-          <section class="mb-10">
-            <h2 class="text-2xl font-bold text-slate-dark mb-4">6. Security</h2>
-            <p class="text-gray-700 mb-4">
-              We take security seriously:
-            </p>
-            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-              <li>All data is encrypted in transit (HTTPS/SSL)</li>
-              <li>Passwords are hashed using industry-standard encryption (bcrypt via Supabase)</li>
-              <li>Database access is restricted to authorized personnel only</li>
-              <li>We use Supabase Row Level Security (RLS) to isolate user data</li>
-            </ul>
-            <p class="text-gray-700 mb-4">
-              No system is 100% secure. If we experience a data breach, we'll notify affected users within 72 hours.
-            </p>
-          </section>
-
-          <!-- Section 7 -->
-          <section class="mb-10">
-            <h2 class="text-2xl font-bold text-slate-dark mb-4">7. Cookies and Tracking</h2>
-            <p class="text-gray-700 mb-4">
-              FlipProfit uses minimal cookies:
-            </p>
-            <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-              <li><strong>Authentication cookies:</strong> Keep you logged in (required for the service to work)</li>
-              <li><strong>Analytics:</strong> We may use privacy-focused analytics (like Plausible or Simple Analytics) to understand how users interact with FlipProfit—no personal data is tracked</li>
-            </ul>
-            <p class="text-gray-700 mb-4">
-              We do not use advertising cookies or third-party tracking pixels.
-            </p>
-          </section>
-
-          <!-- Section 8 -->
-          <section class="mb-10">
-            <h2 class="text-2xl font-bold text-slate-dark mb-4">8. Children's Privacy</h2>
-            <p class="text-gray-700 mb-4">
-              FlipProfit is not intended for users under 13 years old. We do not knowingly collect data from children. If you believe a child has created an account, contact us at <a href="mailto:team@flipprofit.online" class="text-emerald-600 font-semibold hover:underline">team@flipprofit.online</a> and we'll delete it.
-            </p>
-          </section>
-
-          <!-- Section 9 -->
-          <section class="mb-10">
-            <h2 class="text-2xl font-bold text-slate-dark mb-4">9. International Users</h2>
-            <p class="text-gray-700 mb-4">
-              FlipProfit is based in the United States. Your data is stored on servers in the US (via Supabase). By using FlipProfit, you consent to this data transfer.
-            </p>
-            <p class="text-gray-700 mb-4">
-              If you're in the EU or UK, you have additional rights under GDPR. Contact us at <a href="mailto:team@flipprofit.online" class="text-emerald-600 font-semibold hover:underline">team@flipprofit.online</a> to exercise them.
-            </p>
-          </section>
-
-          <!-- Section 10 -->
-          <section class="mb-10">
-            <h2 class="text-2xl font-bold text-slate-dark mb-4">10. Changes to This Policy</h2>
-            <p class="text-gray-700 mb-4">
-              We may update this privacy policy as FlipProfit evolves. If we make significant changes, we'll notify you via email or an in-app notification.
-            </p>
-            <p class="text-gray-700 mb-4">
-              The "Last updated" date at the top of this page shows when the policy was last changed.
-            </p>
-          </section>
-
-          <!-- Contact -->
-          <section class="mb-10">
-            <h2 class="text-2xl font-bold text-slate-dark mb-4">Contact Us</h2>
-            <p class="text-gray-700 mb-4">
-              Questions about this privacy policy? Email us at:
-            </p>
-            <p class="text-lg font-semibold text-emerald-600 mb-4">
-              <a href="mailto:team@flipprofit.online" class="hover:underline">team@flipprofit.online</a>
-            </p>
-            <p class="text-gray-700">
-              Or join our <a href="https://discord.gg/nYj3UzdJ" target="_blank" rel="noopener" class="text-emerald-600 font-semibold hover:underline">Discord community</a> to chat with us.
-            </p>
-          </section>
-        </div>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-slate-dark text-white">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-4 gap-8 mb-8">
-          <div>
-            <div class="flex items-center gap-3 mb-4">
-              <img src="/images/logo-small.png" alt="FlipProfit" class="w-8 h-8" />
-              <span class="font-coiny text-xl">FlipProfit</span>
+            <div class="bg-slate-light rounded-lg p-4">
+              <h3 class="font-semibold text-slate-dark mb-2">Stripe (Payment Processing)</h3>
+              <p class="text-sm text-gray-700">
+                Handles all payment card processing. We never see or store your card details.
+                <a href="https://stripe.com/privacy" target="_blank" rel="noopener" class="text-emerald-600 hover:underline">Stripe Privacy Policy</a>
+              </p>
             </div>
-            <p class="text-gray-400 text-sm">
-              The all-in-one platform for resellers to scout, list, and track profits.
-            </p>
+            <div class="bg-slate-light rounded-lg p-4">
+              <h3 class="font-semibold text-slate-dark mb-2">Google (Shopping API & Gemini AI)</h3>
+              <p class="text-sm text-gray-700">
+                Provides live market pricing (Google Shopping API) and powers AI image analysis for listings (Gemini). We send product images and search terms; we don't share your account details.
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-emerald-600 hover:underline">Google Privacy Policy</a>
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div>
-            <h3 class="font-semibold mb-3">Product</h3>
-            <ul class="space-y-2 text-sm">
-              <li><a href="/#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
-              <li><a href="https://app.flipprofit.online/signup" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="/#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="https://discord.gg/nYj3UzdJ" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">Community</a></li>
-            </ul>
-          </div>
+        <!-- Section 4 -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-slate-dark mb-4">4. Data Retention</h2>
+          <p class="text-gray-700 mb-4">
+            We keep your data as long as your account is active. If you delete your account, we delete:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+            <li>Your profile information</li>
+            <li>Your scans and inventory data</li>
+            <li>Your profit tracking records</li>
+          </ul>
+          <p class="text-gray-700 mb-4">
+            We may retain some data for legal or accounting purposes (e.g., transaction records for tax compliance).
+          </p>
+        </section>
 
-          <div>
-            <h3 class="font-semibold mb-3">Company</h3>
-            <ul class="space-y-2 text-sm">
-              <li><a href="https://app.flipprofit.online/signup" class="text-gray-400 hover:text-white transition-colors">Sign Up</a></li>
-              <li><a href="https://app.flipprofit.online/login" class="text-gray-400 hover:text-white transition-colors">Login</a></li>
-              <li><a href="/contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-            </ul>
-          </div>
+        <!-- Section 5 -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-slate-dark mb-4">5. Your Rights</h2>
+          <p class="text-gray-700 mb-4">
+            You have the right to:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+            <li><strong>Access your data:</strong> Request a copy of all data we have about you</li>
+            <li><strong>Correct your data:</strong> Update incorrect information in your account settings</li>
+            <li><strong>Delete your data:</strong> Request full account deletion (we'll delete everything within 30 days)</li>
+            <li><strong>Export your data:</strong> Download your scans and profit data as CSV</li>
+          </ul>
+          <p class="text-gray-700 mb-4">
+            To exercise these rights, email us at <a href="mailto:team@flipprofit.online" class="text-emerald-600 font-semibold hover:underline">team@flipprofit.online</a>
+          </p>
+        </section>
 
-          <div>
-            <h3 class="font-semibold mb-3">Legal</h3>
-            <ul class="space-y-2 text-sm">
-              <li><a href="/privacy" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="/terms" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
-            </ul>
-          </div>
-        </div>
+        <!-- Section 6 -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-slate-dark mb-4">6. Security</h2>
+          <p class="text-gray-700 mb-4">
+            We take security seriously:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+            <li>All data is encrypted in transit (HTTPS/SSL)</li>
+            <li>Passwords are hashed using industry-standard encryption (bcrypt via Supabase)</li>
+            <li>Database access is restricted to authorized personnel only</li>
+            <li>We use Supabase Row Level Security (RLS) to isolate user data</li>
+          </ul>
+          <p class="text-gray-700 mb-4">
+            No system is 100% secure. If we experience a data breach, we'll notify affected users within 72 hours.
+          </p>
+        </section>
 
-        <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} FlipProfit. All rights reserved.</p>
-        </div>
+        <!-- Section 7 -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-slate-dark mb-4">7. Cookies and Tracking</h2>
+          <p class="text-gray-700 mb-4">
+            FlipProfit uses minimal cookies:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+            <li><strong>Authentication cookies:</strong> Keep you logged in (required for the service to work)</li>
+            <li><strong>Analytics:</strong> We may use privacy-focused analytics (like Plausible or Simple Analytics) to understand how users interact with FlipProfit—no personal data is tracked</li>
+          </ul>
+          <p class="text-gray-700 mb-4">
+            We do not use advertising cookies or third-party tracking pixels.
+          </p>
+        </section>
+
+        <!-- Section 8 -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-slate-dark mb-4">8. Children's Privacy</h2>
+          <p class="text-gray-700 mb-4">
+            FlipProfit is not intended for users under 13 years old. We do not knowingly collect data from children. If you believe a child has created an account, contact us at <a href="mailto:team@flipprofit.online" class="text-emerald-600 font-semibold hover:underline">team@flipprofit.online</a> and we'll delete it.
+          </p>
+        </section>
+
+        <!-- Section 9 -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-slate-dark mb-4">9. International Users</h2>
+          <p class="text-gray-700 mb-4">
+            FlipProfit is based in the United States. Your data is stored on servers in the US (via Supabase). By using FlipProfit, you consent to this data transfer.
+          </p>
+          <p class="text-gray-700 mb-4">
+            If you're in the EU or UK, you have additional rights under GDPR. Contact us at <a href="mailto:team@flipprofit.online" class="text-emerald-600 font-semibold hover:underline">team@flipprofit.online</a> to exercise them.
+          </p>
+        </section>
+
+        <!-- Section 10 -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-slate-dark mb-4">10. Changes to This Policy</h2>
+          <p class="text-gray-700 mb-4">
+            We may update this privacy policy as FlipProfit evolves. If we make significant changes, we'll notify you via email or an in-app notification.
+          </p>
+          <p class="text-gray-700 mb-4">
+            The "Last updated" date at the top of this page shows when the policy was last changed.
+          </p>
+        </section>
+
+        <!-- Contact -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-slate-dark mb-4">Contact Us</h2>
+          <p class="text-gray-700 mb-4">
+            Questions about this privacy policy? Email us at:
+          </p>
+          <p class="text-lg font-semibold text-emerald-600 mb-4">
+            <a href="mailto:team@flipprofit.online" class="hover:underline">team@flipprofit.online</a>
+          </p>
+          <p class="text-gray-700">
+            Or join our <a href="https://discord.gg/nYj3UzdJ" target="_blank" rel="noopener" class="text-emerald-600 font-semibold hover:underline">Discord community</a> to chat with us.
+          </p>
+        </section>
       </div>
-    </footer>
-  </body>
-</html>
+    </div>
+  </main>
+</Layout>
