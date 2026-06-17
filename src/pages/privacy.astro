@@ -30,7 +30,7 @@ const lastUpdated = "February 19, 2026";
 
           <div class="hidden md:flex items-center gap-6">
             <a href="/#proof" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Proof</a>
-            <a href="/#founding-members" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Pricing</a>
+            <a href="https://app.flipprofit.online/signup" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Pricing</a>
             <a href="/#features" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Features</a>
             <a href="/#faq" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">FAQ</a>
             <a
@@ -69,7 +69,7 @@ const lastUpdated = "February 19, 2026";
         <div class="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-8 mb-12">
           <h2 class="text-2xl font-bold text-slate-dark mb-4">Plain English Summary</h2>
           <p class="text-gray-700 mb-4">
-            We collect only what we need to run FlipProfit. This includes your email, the items you scan, and your eBay data (if you connect it). We don't sell your data. We use Supabase for database storage and Stripe for payments. You can request deletion of your data anytime.
+            We collect only what we need to run FlipProfit. This includes your email and the items you scan and list. We don't sell your data. We use Supabase for database storage, Stripe for payments and payouts, and Google for market data and AI analysis. You can request deletion of your data anytime.
           </p>
           <p class="text-sm text-gray-600 italic">
             The legal version below says the same thing with more detail.
@@ -107,7 +107,7 @@ const lastUpdated = "February 19, 2026";
               If you connect third-party services:
             </p>
             <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-              <li><strong>eBay:</strong> We access your eBay sales data, listings, and order information via eBay's API (with your permission)</li>
+              <li><strong>Stripe Connect:</strong> If you sell, you connect a Stripe account so we can pay out your earnings (Stripe handles your bank details directly)</li>
               <li><strong>Stripe:</strong> We store your Stripe customer ID for billing (Stripe handles your payment card data directly—we never see it)</li>
             </ul>
           </section>
@@ -120,7 +120,7 @@ const lastUpdated = "February 19, 2026";
             </p>
             <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
               <li>Provide the FlipProfit service (scout feature, listing tools, profit tracking)</li>
-              <li>Sync your eBay sales data automatically</li>
+              <li>Process your marketplace orders, shipping, and payouts</li>
               <li>Process payments via Stripe</li>
               <li>Send important account emails (password resets, billing notifications)</li>
               <li>Improve our product (we analyze usage patterns to fix bugs and add features)</li>
@@ -131,7 +131,7 @@ const lastUpdated = "February 19, 2026";
             <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
               <li>Sell your data to third parties</li>
               <li>Show you ads based on your data</li>
-              <li>Share your data with anyone except our service providers (Supabase, Stripe, eBay API)</li>
+              <li>Share your data with anyone except our service providers (Supabase, Stripe, Google)</li>
             </ul>
           </section>
 
@@ -157,10 +157,10 @@ const lastUpdated = "February 19, 2026";
                 </p>
               </div>
               <div class="bg-slate-light rounded-lg p-4">
-                <h3 class="font-semibold text-slate-dark mb-2">eBay API</h3>
+                <h3 class="font-semibold text-slate-dark mb-2">Google (Shopping API & Gemini AI)</h3>
                 <p class="text-sm text-gray-700">
-                  Retrieves your eBay sales data, listings, and product information (only if you connect your eBay account).
-                  <a href="https://www.ebay.com/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy" target="_blank" rel="noopener" class="text-emerald-600 hover:underline">eBay Privacy Policy</a>
+                  Provides live market pricing (Google Shopping API) and powers AI image analysis for listings (Gemini). We send product images and search terms; we don't share your account details.
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-emerald-600 hover:underline">Google Privacy Policy</a>
                 </p>
               </div>
             </div>
@@ -296,7 +296,7 @@ const lastUpdated = "February 19, 2026";
             <h3 class="font-semibold mb-3">Product</h3>
             <ul class="space-y-2 text-sm">
               <li><a href="/#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
-              <li><a href="/#founding-members" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="https://app.flipprofit.online/signup" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
               <li><a href="/#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
               <li><a href="https://discord.gg/nYj3UzdJ" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">Community</a></li>
             </ul>
