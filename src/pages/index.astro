@@ -64,45 +64,45 @@ const CHECK = "M5 13l4 4L19 7";
   </Fragment>
 
   <!-- Hero -->
-  <section class="bg-gradient-to-br from-emerald-50 via-white to-emerald-50 dark:from-emerald-950 dark:via-slate-900 dark:to-emerald-950">
+  <section class="bg-gradient-to-br from-primary/10 via-white to-primary/10 dark:via-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Left: Text -->
         <div>
-          <div class="inline-block bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-5">
+          <div class="inline-block bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-5">
             Buy · Sell · Flip
           </div>
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-dark dark:text-slate-100 leading-tight mb-6">
-            The marketplace for<br /><span class="text-emerald">one-of-a-kind finds.</span>
+            The marketplace for<br /><span class="text-primary">one-of-a-kind finds.</span>
           </h1>
           <p class="text-lg sm:text-xl text-gray-600 dark:text-slate-400 mb-8 max-w-xl">
             Buyers discover unique items at great prices. Sellers list in seconds and keep more of every sale.
           </p>
 
           <div class="flex flex-col sm:flex-row gap-3 mb-5">
-            <a href={JOIN} class="inline-flex items-center justify-center px-8 py-4 bg-emerald text-white rounded-lg font-semibold text-lg hover:bg-emerald-600 transition-colors shadow-lg hover:shadow-xl">
+            <a href={JOIN} class="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl">
               Join the marketplace
               <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
             </a>
           </div>
           <p class="text-sm text-gray-500 dark:text-slate-500">
-            Shopping? <a href={APP} class="text-emerald-600 font-semibold hover:underline">Browse the marketplace</a>
+            Shopping? <a href={APP} class="text-primary font-semibold hover:underline">Browse the marketplace</a>
             &nbsp;·&nbsp;
-            Selling? <a href={JOIN} class="text-emerald-600 font-semibold hover:underline">Start free</a>
+            Selling? <a href={JOIN} class="text-primary font-semibold hover:underline">Start free</a>
           </p>
 
           <!-- Trust strip -->
           <div class="flex flex-wrap gap-x-6 gap-y-2 mt-8 text-sm text-gray-600 dark:text-slate-400">
             <span class="inline-flex items-center gap-2">
-              <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               Secure escrow checkout
             </span>
             <span class="inline-flex items-center gap-2">
-              <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 100-4h14a2 2 0 100 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"></path></svg>
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 100-4h14a2 2 0 100 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"></path></svg>
               Tracked shipping
             </span>
             <span class="inline-flex items-center gap-2">
-              <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg>
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg>
               No monthly fees to start
             </span>
           </div>
@@ -110,28 +110,28 @@ const CHECK = "M5 13l4 4L19 7";
 
         <!-- Right: Marketplace listing cards -->
         <div class="grid grid-cols-2 gap-4">
-          <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border border-emerald-100 dark:border-emerald-500/20">
+          <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border border-primary/20">
             <div class="aspect-square"><Image src={itemVintage} alt="Vintage collectible listing" width={400} densities={[1, 2]} format="webp" class="w-full h-full object-cover" /></div>
             <div class="p-3">
               <div class="text-sm font-medium text-slate-dark dark:text-slate-100">Vintage Collectible</div>
-              <div class="text-emerald-600 font-bold">$45</div>
+              <div class="text-primary font-bold">$45</div>
             </div>
           </div>
-          <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border border-emerald-100 dark:border-emerald-500/20 mt-8">
+          <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border border-primary/20 mt-8">
             <div class="aspect-square"><Image src={itemVhs} alt="Star Wars VHS set listing" width={400} densities={[1, 2]} format="webp" class="w-full h-full object-cover" /></div>
             <div class="p-3">
               <div class="text-sm font-medium text-slate-dark dark:text-slate-100">Star Wars VHS Set</div>
-              <div class="text-emerald-600 font-bold">$32</div>
+              <div class="text-primary font-bold">$32</div>
             </div>
           </div>
-          <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border border-emerald-100 dark:border-emerald-500/20 -mt-4">
+          <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border border-primary/20 -mt-4">
             <div class="aspect-square"><Image src={itemNib} alt="New-in-box collectible listing" width={400} densities={[1, 2]} format="webp" class="w-full h-full object-cover" /></div>
             <div class="p-3">
               <div class="text-sm font-medium text-slate-dark dark:text-slate-100">NIB Collectible</div>
-              <div class="text-emerald-600 font-bold">$68</div>
+              <div class="text-primary font-bold">$68</div>
             </div>
           </div>
-          <div class="flex items-center justify-center rounded-2xl bg-emerald-600 text-white p-6 mt-4 shadow-xl">
+          <div class="flex items-center justify-center rounded-2xl bg-primary text-primary-foreground p-6 mt-4 shadow-xl">
             <a href={APP} class="text-center font-semibold">
               Browse everything
               <svg class="w-5 h-5 mx-auto mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
@@ -147,28 +147,28 @@ const CHECK = "M5 13l4 4L19 7";
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
       <!-- For Buyers -->
       <div id="buy" class="bg-slate-light dark:bg-slate-800/50 rounded-2xl p-8">
-        <div class="text-emerald-600 font-bold text-sm uppercase tracking-wider mb-2">For Buyers</div>
+        <div class="text-primary font-bold text-sm uppercase tracking-wider mb-2">For Buyers</div>
         <h2 class="text-2xl sm:text-3xl font-bold text-slate-dark dark:text-slate-100 mb-5">Find things you can't find anywhere else.</h2>
         <ul class="space-y-3 text-gray-700 dark:text-slate-300 mb-7">
-          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Unique finds</strong> — vintage, collectibles, and deals you won't see at big-box retail</span></li>
-          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Protected payments</strong> — your money is held until your item arrives</span></li>
-          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Tracked shipping</strong> on every order, so you know exactly when it lands</span></li>
-          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Fair prices</strong>, straight from the people who found them</span></li>
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Unique finds</strong> — vintage, collectibles, and deals you won't see at big-box retail</span></li>
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Protected payments</strong> — your money is held until your item arrives</span></li>
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Tracked shipping</strong> on every order, so you know exactly when it lands</span></li>
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Fair prices</strong>, straight from the people who found them</span></li>
         </ul>
-        <a href={APP} class="inline-flex items-center justify-center px-6 py-3 bg-emerald text-white rounded-lg font-semibold hover:bg-emerald-600 transition-colors">Browse the marketplace</a>
+        <a href={APP} class="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors">Browse the marketplace</a>
       </div>
 
       <!-- For Sellers -->
       <div id="sell" class="bg-slate-dark dark:bg-slate-800 text-white rounded-2xl p-8">
-        <div class="text-emerald-400 font-bold text-sm uppercase tracking-wider mb-2">For Sellers</div>
+        <div class="text-primary font-bold text-sm uppercase tracking-wider mb-2">For Sellers</div>
         <h2 class="text-2xl sm:text-3xl font-bold mb-5">List in seconds. Keep more of every sale.</h2>
         <ul class="space-y-3 text-gray-200 dark:text-slate-300 mb-7">
-          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>List in seconds</strong> — snap a photo and AI writes the title and details (50 free/month)</span></li>
-          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Keep more</strong> — low fees (5–9%) and no monthly cost to start</span></li>
-          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Get paid fast</strong> — secure payouts straight to your bank</span></li>
-          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Built-in buyers</strong> — reach shoppers already looking, no audience needed</span></li>
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>List in seconds</strong> — snap a photo and AI writes the title and details (50 free/month)</span></li>
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Keep more</strong> — low fees (5–9%) and no monthly cost to start</span></li>
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Get paid fast</strong> — secure payouts straight to your bank</span></li>
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={CHECK}></path></svg><span><strong>Built-in buyers</strong> — reach shoppers already looking, no audience needed</span></li>
         </ul>
-        <a href={JOIN} class="inline-flex items-center justify-center px-6 py-3 bg-emerald text-white rounded-lg font-semibold hover:bg-emerald-600 transition-colors">Start selling free</a>
+        <a href={JOIN} class="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors">Start selling free</a>
       </div>
     </div>
   </section>
@@ -183,9 +183,9 @@ const CHECK = "M5 13l4 4L19 7";
         <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-md">
           <h3 class="text-xl font-bold text-slate-dark dark:text-slate-100 mb-6">Buying is easy</h3>
           <ol class="space-y-5">
-            <li class="flex gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300 font-bold flex items-center justify-center">1</span><div><div class="font-semibold text-slate-dark dark:text-slate-100">Browse the finds</div><p class="text-gray-600 dark:text-slate-400 text-sm">Search thousands of one-of-a-kind items from sellers everywhere.</p></div></li>
-            <li class="flex gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300 font-bold flex items-center justify-center">2</span><div><div class="font-semibold text-slate-dark dark:text-slate-100">Check out securely</div><p class="text-gray-600 dark:text-slate-400 text-sm">Your payment is protected — held until your item arrives.</p></div></li>
-            <li class="flex gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300 font-bold flex items-center justify-center">3</span><div><div class="font-semibold text-slate-dark dark:text-slate-100">It ships to your door</div><p class="text-gray-600 dark:text-slate-400 text-sm">Track every order from purchase to delivery.</p></div></li>
+            <li class="flex gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center">1</span><div><div class="font-semibold text-slate-dark dark:text-slate-100">Browse the finds</div><p class="text-gray-600 dark:text-slate-400 text-sm">Search thousands of one-of-a-kind items from sellers everywhere.</p></div></li>
+            <li class="flex gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center">2</span><div><div class="font-semibold text-slate-dark dark:text-slate-100">Check out securely</div><p class="text-gray-600 dark:text-slate-400 text-sm">Your payment is protected — held until your item arrives.</p></div></li>
+            <li class="flex gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center">3</span><div><div class="font-semibold text-slate-dark dark:text-slate-100">It ships to your door</div><p class="text-gray-600 dark:text-slate-400 text-sm">Track every order from purchase to delivery.</p></div></li>
           </ol>
         </div>
 
@@ -193,9 +193,9 @@ const CHECK = "M5 13l4 4L19 7";
         <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-md">
           <h3 class="text-xl font-bold text-slate-dark dark:text-slate-100 mb-6">Selling is easier</h3>
           <ol class="space-y-5">
-            <li class="flex gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300 font-bold flex items-center justify-center">1</span><div><div class="font-semibold text-slate-dark dark:text-slate-100">Snap a photo</div><p class="text-gray-600 dark:text-slate-400 text-sm">Take a picture of your item — that's the hard part done.</p></div></li>
-            <li class="flex gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300 font-bold flex items-center justify-center">2</span><div><div class="font-semibold text-slate-dark dark:text-slate-100">AI lists it for you</div><p class="text-gray-600 dark:text-slate-400 text-sm">Get a title, description, and suggested price in seconds.</p></div></li>
-            <li class="flex gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300 font-bold flex items-center justify-center">3</span><div><div class="font-semibold text-slate-dark dark:text-slate-100">Get paid when it sells</div><p class="text-gray-600 dark:text-slate-400 text-sm">We handle the shipping label; your payout lands in your bank.</p></div></li>
+            <li class="flex gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center">1</span><div><div class="font-semibold text-slate-dark dark:text-slate-100">Snap a photo</div><p class="text-gray-600 dark:text-slate-400 text-sm">Take a picture of your item — that's the hard part done.</p></div></li>
+            <li class="flex gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center">2</span><div><div class="font-semibold text-slate-dark dark:text-slate-100">AI lists it for you</div><p class="text-gray-600 dark:text-slate-400 text-sm">Get a title, description, and suggested price in seconds.</p></div></li>
+            <li class="flex gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center">3</span><div><div class="font-semibold text-slate-dark dark:text-slate-100">Get paid when it sells</div><p class="text-gray-600 dark:text-slate-400 text-sm">We handle the shipping label; your payout lands in your bank.</p></div></li>
           </ol>
         </div>
       </div>
@@ -208,22 +208,22 @@ const CHECK = "M5 13l4 4L19 7";
       <h2 class="text-3xl sm:text-4xl font-bold text-slate-dark dark:text-slate-100 mb-12 text-center">Built for a safe, simple flip</h2>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="text-center p-6 rounded-2xl bg-slate-light dark:bg-slate-800/50">
-          <svg class="w-8 h-8 text-emerald-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <svg class="w-8 h-8 text-primary mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           <div class="font-semibold text-slate-dark dark:text-slate-100 mb-1">Buyer protection</div>
           <p class="text-sm text-gray-600 dark:text-slate-400">Payments held until your item arrives.</p>
         </div>
         <div class="text-center p-6 rounded-2xl bg-slate-light dark:bg-slate-800/50">
-          <svg class="w-8 h-8 text-emerald-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 100-4h14a2 2 0 100 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"></path></svg>
+          <svg class="w-8 h-8 text-primary mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 100-4h14a2 2 0 100 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"></path></svg>
           <div class="font-semibold text-slate-dark dark:text-slate-100 mb-1">Tracked shipping</div>
           <p class="text-sm text-gray-600 dark:text-slate-400">Prepaid labels and tracking on every order.</p>
         </div>
         <div class="text-center p-6 rounded-2xl bg-slate-light dark:bg-slate-800/50">
-          <svg class="w-8 h-8 text-emerald-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path></svg>
+          <svg class="w-8 h-8 text-primary mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path></svg>
           <div class="font-semibold text-slate-dark dark:text-slate-100 mb-1">Low seller fees</div>
           <p class="text-sm text-gray-600 dark:text-slate-400">Just 5–9% — no monthly cost to start.</p>
         </div>
         <div class="text-center p-6 rounded-2xl bg-slate-light dark:bg-slate-800/50">
-          <svg class="w-8 h-8 text-emerald-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          <svg class="w-8 h-8 text-primary mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
           <div class="font-semibold text-slate-dark dark:text-slate-100 mb-1">AI-powered listings</div>
           <p class="text-sm text-gray-600 dark:text-slate-400">Snap a photo, get a listing in seconds.</p>
         </div>
@@ -232,15 +232,15 @@ const CHECK = "M5 13l4 4L19 7";
   </section>
 
   <!-- Final CTA -->
-  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-600 to-emerald-700 text-white">
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to flip?</h2>
-      <p class="text-lg text-emerald-50 mb-8">Join the marketplace built for buyers who love a great find and sellers who want to keep more of every sale.</p>
+      <p class="text-lg text-primary-foreground/90 mb-8">Join the marketplace built for buyers who love a great find and sellers who want to keep more of every sale.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={JOIN} class="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 rounded-lg font-semibold text-lg hover:bg-emerald-50 transition-colors shadow-lg">Join the marketplace</a>
-        <a href={APP} class="inline-flex items-center justify-center px-8 py-4 bg-emerald-800/40 text-white rounded-lg font-semibold text-lg hover:bg-emerald-800/60 transition-colors border border-white/30">Browse items</a>
+        <a href={JOIN} class="inline-flex items-center justify-center px-8 py-4 bg-primary-foreground text-primary rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors shadow-lg">Join the marketplace</a>
+        <a href={APP} class="inline-flex items-center justify-center px-8 py-4 bg-black/10 text-primary-foreground rounded-lg font-semibold text-lg hover:bg-black/20 transition-colors border border-primary-foreground/30">Browse items</a>
       </div>
-      <p class="text-sm text-emerald-100 mt-5">Free to browse · Free to start selling · 50 free AI listings every month</p>
+      <p class="text-sm text-primary-foreground/80 mt-5">Free to browse · Free to start selling · 50 free AI listings every month</p>
     </div>
   </section>
 
