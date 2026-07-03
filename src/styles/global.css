@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Class-based dark mode (Tailwind v4 defaults `dark:` to prefers-color-scheme).
+   A pre-paint script in Layout.astro toggles `.dark` on <html> — the same
+   `flipprofit-theme` model the app uses, so the two feel like one product. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Self-hosted Coiny (logo font) — avoids a render-blocking request to fonts.googleapis.com */
 @font-face {
   font-family: 'Coiny';
@@ -37,6 +42,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Theme the native UI (scrollbars, form controls, autofill) to match. */
+html { color-scheme: light; }
+html.dark { color-scheme: dark; }
 
 .font-coiny {
   font-family: var(--font-coiny);

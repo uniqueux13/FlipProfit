@@ -15,6 +15,60 @@ const {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Pre-paint theme: resolve light/dark and apply `.dark` to <html> BEFORE
+         first paint so there's no flash. Mirrors the app's ThemeContext exactly
+         (same localStorage key + system/light/dark model) so the marketing site
+         and the app feel like one product. `window.__fpTheme` is reused by the
+         nav toggle. Note: localStorage isn't shared across the apex and app
+         subdomains, so this tracks the visitor's choice on this site only. -->
+    <script is:inline>
+      (function () {
+        var KEY = 'flipprofit-theme';
+        var COLOR = { light: '#F9F9F9', dark: '#181818' };
+        function prefersDark() {
+          return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        }
+        function stored() {
+          try {
+            var s = localStorage.getItem(KEY);
+            if (s === 'light' || s === 'dark' || s === 'system') return s;
+          } catch (e) {}
+          return 'system';
+        }
+        function resolve(t) { return t === 'system' ? (prefersDark() ? 'dark' : 'light') : t; }
+        function apply(resolved) {
+          document.documentElement.classList.toggle('dark', resolved === 'dark');
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (!meta) {
+            meta = document.createElement('meta');
+            meta.setAttribute('name', 'theme-color');
+            document.head.appendChild(meta);
+          }
+          meta.setAttribute('content', COLOR[resolved]);
+        }
+        var api = window.__fpTheme = {
+          get: stored,
+          set: function (t) {
+            try { localStorage.setItem(KEY, t); } catch (e) {}
+            apply(resolve(t));
+          },
+          // System -> Light -> Dark -> System (matches the app's single-button cycle).
+          cycle: function () {
+            var t = stored();
+            api.set(t === 'system' ? 'light' : t === 'light' ? 'dark' : 'system');
+          },
+        };
+        apply(resolve(stored()));
+        // While on 'system', follow live OS changes.
+        if (window.matchMedia) {
+          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+            if (stored() === 'system') apply(resolve('system'));
+          });
+        }
+      })();
+    </script>
+
     <link rel="icon" type="image/png" href="/favicon.png" />
     <!-- Preload the self-hosted wordmark font to avoid a flash on first paint. -->
     <link rel="preload" href="/fonts/coiny-latin-400.woff2" as="font" type="font/woff2" crossorigin />
@@ -51,7 +105,7 @@ const {
     </script>
   </head>
 
-  <body class="bg-white">
+  <body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
     <Nav />
     <slot />
     <Footer />
